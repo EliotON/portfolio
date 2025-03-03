@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Eliot KONDRYC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: Arial, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Header / Navbar -->
+    <header class="bg-blue-600 text-white py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-2xl font-bold">Eliot KONDRYC</h1>
+            <nav>
+                <a href="#about" class="mx-2">À Propos</a>
+                <a href="#projects" class="mx-2">Projets</a>
+                <a href="#contact" class="mx-2">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero / Présentation -->
+    <section class="text-center py-16 bg-blue-50">
+        <h2 class="text-4xl font-bold">Bienvenue sur mon portfolio</h2>
+        <p class="mt-2 text-lg">Étudiant en BTS SIO SLAM, passionné par le développement</p>
+        <img src="https://via.placeholder.com/150" alt="Photo de profil" class="mx-auto mt-4 rounded-full">
+    </section>
+
+    <!-- À propos -->
+    <section id="about" class="container mx-auto py-12 px-4">
+        <h2 class="text-3xl font-bold mb-4">À Propos de Moi</h2>
+        <p class="text-gray-700 leading-relaxed">
+            Je suis Eliot KONDRYC, étudiant en BTS SIO option SLAM. Je suis passionné par le développement web et la création d'applications. 
+            Durant ma formation, j'ai appris à coder en HTML, CSS, PHP, MySQL, JavaScript et à utiliser des frameworks comme Symfony ou Laravel.
+        </p>
+        <h3 class="text-2xl font-semibold mt-6">Compétences Techniques :</h3>
+        <ul class="list-disc pl-6 mt-2 text-gray-700">
+            <li>HTML, CSS, JavaScript</li>
+            <li>PHP / MySQL</li>
+            <li>Symfony, Laravel</li>
+            <li>Git & GitHub</li>
+            <li>Docker</li>
+        </ul>
+    </section>
+
+    <!-- Projets -->
+    <section id="projects" class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Mes Projets</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Projet 1 -->
+                <div class="bg-gray-50 shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/300" alt="Projet 1" class="w-full">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl">Gestion de Stock</h3>
+                        <p class="text-gray-600 mt-2">Application web pour la gestion de stock d'une entreprise.</p>
+                        <p class="mt-2"><strong>Technos :</strong> PHP, MySQL, Bootstrap</p>
+                        <a href="#" class="text-blue-600 mt-2 inline-block">Voir le projet</a>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="bg-gray-50 shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/300" alt="Projet 2" class="w-full">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl">Portfolio Dynamique</h3>
+                        <p class="text-gray-600 mt-2">Création d'un portfolio dynamique avec Symfony.</p>
+                        <p class="mt-2"><strong>Technos :</strong> Symfony, Twig, Doctrine</p>
+                        <a href="#" class="text-blue-600 mt-2 inline-block">Voir le projet</a>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="bg-gray-50 shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/300" alt="Projet 3" class="w-full">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl">Application de Notes</h3>
+                        <p class="text-gray-600 mt-2">Application pour prendre des notes et les organiser.</p>
+                        <p class="mt-2"><strong>Technos :</strong> HTML, CSS, JavaScript</p>
+                        <a href="#" class="text-blue-600 mt-2 inline-block">Voir le projet</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-blue-600 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold">Me Contacter</h2>
+            <p class="mt-2">Envie de discuter ou de collaborer ? Contactez-moi !</p>
+
+            <form class="mt-6 max-w-lg mx-auto">
+                <input type="text" placeholder="Votre Nom" class="w-full p-2 mb-4 rounded">
+                <input type="email" placeholder="Votre Email" class="w-full p-2 mb-4 rounded">
+                <textarea placeholder="Votre Message" class="w-full p-2 mb-4 rounded"></textarea>
+                <button type="submit" class="bg-white text-blue-600 px-4 py-2 rounded font-bold">Envoyer</button>
+            </form>
+
+            <div class="mt-4">
+                <a href="https://www.linkedin.com/in/eliot-kondryc" target="_blank" class="mx-2">LinkedIn</a> |
+                <a href="https://github.com/eliotkondryc" target="_blank" class="mx-2">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-gray-800 text-white">
+        <p>&copy; 2025 Eliot KONDRYC - BTS SIO SLAM</p>
+    </footer>
+
+</body>
+</html>
