@@ -8,6 +8,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
@@ -70,7 +71,7 @@
         <div class="container mx-auto px-4" data-aos="fade-up">
             <div class="max-w-4xl mx-auto text-center">
                 <h1 class="text-5xl md:text-6xl font-bold mb-6">
-                    Développeur Web <span class="gradient-text">Full-Stack</span>
+                    Développeur <span class="gradient-text"><span id="typed"></span></span>
                 </h1>
                 <p class="text-xl text-gray-600 mb-8">
                     Étudiant passionné en BTS SIO SLAM, je crée des applications web innovantes et intuitives
@@ -287,6 +288,15 @@
         AOS.init({
             duration: 800,
             once: true,
+        });
+
+        // Configuration de l'animation Typed.js
+        new Typed('#typed', {
+            strings: ['Full-Stack', 'Front-End', 'Back-End'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true,
+            backDelay: 1500
         });
     </script>
 </body>
