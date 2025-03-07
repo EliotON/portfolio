@@ -20,6 +20,7 @@
         .gradient-text {
             background: linear-gradient(45deg, #3B82F6, #2563EB);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -92,26 +93,41 @@
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">Mon Parcours</h2>
+            </h2>
             
-            <div class="max-w-4xl mx-auto">
+            <div class="max-w-5xl mx-auto">
                 <!-- Timeline -->
                 <div class="relative">
                     <!-- Ligne verticale -->
-                    <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200"></div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1.5 bg-gradient-to-b from-blue-400 to-blue-600 rounded-full"></div>
 
                     <!-- BAC STI2D -->
-                    <div class="relative mb-20" data-aos="fade-right">
+                    <div class="relative mb-24" data-aos="fade-right">
                         <div class="flex items-center">
-                            <div class="w-1/2 pr-8 text-right">
-                                <div class="bg-white p-6 rounded-xl shadow-lg">
-                                    <h3 class="text-xl font-bold text-blue-600 mb-2">BAC STI2D</h3>
-                                    <p class="text-gray-600 mb-2">2021 - 2023</p>
-                                    <p class="text-gray-700">Lycée Andrée Malraux - Béthune</p>
+                            <div class="w-1/2 pr-12 text-right">
+                                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-blue-500">
+                                    <div class="flex items-center justify-end mb-4">
+                                        <div class="text-right mr-4">
+                                            <h3 class="text-xl font-bold text-blue-600 mb-1">BAC STI2D</h3>
+                                            <p class="text-gray-600 mb-2 text-sm font-medium">2021 - 2023</p>
+                                        </div>
+                                        <div class="p-3 bg-blue-100 rounded-full">
+                                            <i class="fas fa-graduation-cap text-2xl text-blue-600"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 font-medium">Lycée Andrée Malraux - Béthune</p>
                                     <p class="text-gray-600 mt-2">Spécialité Système d'Information Numérique</p>
+                                    <div class="mt-4 pt-4 border-t border-gray-100">
+                                        <span class="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Electronique</span>
+                                        <span class="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Programmation</span>
+                                        <span class="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm mt-2">Réseaux</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-4">
-                                <div class="w-8 h-8 bg-blue-600 rounded-full border-4 border-white shadow"></div>
+                            <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                <div class="w-10 h-10 bg-blue-600 rounded-full border-4 border-white shadow-lg flex items-center justify-center">
+                                    <span class="text-white font-bold text-xs">2023</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -120,21 +136,45 @@
                     <div class="relative" data-aos="fade-left">
                         <div class="flex items-center">
                             <div class="w-1/2"></div>
-                            <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-4">
-                                <div class="w-8 h-8 bg-blue-600 rounded-full border-4 border-white shadow"></div>
+                            <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                <div class="w-10 h-10 bg-blue-600 rounded-full border-4 border-white shadow-lg flex items-center justify-center">
+                                    <span class="text-white font-bold text-xs">2025</span>
+                                </div>
                             </div>
-                            <div class="w-1/2 pl-8">
-                                <div class="bg-white p-6 rounded-xl shadow-lg">
-                                    <h3 class="text-xl font-bold text-blue-600 mb-2">BTS SIO option SLAM</h3>
-                                    <p class="text-gray-600 mb-2">2023 - 2025</p>
-                                    <p class="text-gray-700">Lycée Andrée Malraux - Béthune</p>
+                            <div class="w-1/2 pl-12">
+                                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-blue-500">
+                                    <div class="flex items-center mb-4">
+                                        <div class="p-3 bg-blue-100 rounded-full">
+                                            <i class="fas fa-laptop-code text-2xl text-blue-600"></i>
+                                        </div>
+                                        <div class="ml-4">
+                                            <h3 class="text-xl font-bold text-blue-600 mb-1">BTS SIO option SLAM</h3>
+                                            <p class="text-gray-600 mb-2 text-sm font-medium">2023 - 2025</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 font-medium">Lycée Andrée Malraux - Béthune</p>
                                     <p class="text-gray-600 mt-2">Solutions Logicielles et Applications Métiers</p>
-                                    <ul class="mt-4 text-gray-600 list-disc list-inside">
-                                        <li>Développement d'applications</li>
-                                        <li>Gestion de projets</li>
-                                        <li>Base de données</li>
-                                        <li>Cybersécurité</li>
-                                    </ul>
+                                    
+                                    <div class="mt-4 pt-4 border-t border-gray-100">
+                                        <div class="grid grid-cols-2 gap-3">
+                                            <div class="flex items-start">
+                                                <i class="fas fa-code text-blue-500 mt-1 mr-2"></i>
+                                                <span class="text-gray-700">Développement d'applications</span>
+                                            </div>
+                                            <div class="flex items-start">
+                                                <i class="fas fa-tasks text-blue-500 mt-1 mr-2"></i>
+                                                <span class="text-gray-700">Gestion de projets</span>
+                                            </div>
+                                            <div class="flex items-start">
+                                                <i class="fas fa-database text-blue-500 mt-1 mr-2"></i>
+                                                <span class="text-gray-700">Base de données</span>
+                                            </div>
+                                            <div class="flex items-start">
+                                                <i class="fas fa-shield-alt text-blue-500 mt-1 mr-2"></i>
+                                                <span class="text-gray-700">Cybersécurité</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -244,7 +284,7 @@
                 <!-- ANSSI -->
                 <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition" data-aos="fade-up">
                     <div class="flex items-center mb-4">
-                        <img src="https://secnumacademie.gouv.fr/sites/default/files/2019-09/logo_anssi_secnumacademie.png" 
+                        <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/d/d9/ANSSI_Logo.svg/langfr-520px-ANSSI_Logo.svg.png" 
                              alt="ANSSI" class="w-16 h-16 object-contain mr-4">
                         <div>
                             <h3 class="font-bold text-lg">SecNumAcadémie</h3>
@@ -254,17 +294,20 @@
                     <p class="text-gray-600">Formation aux bonnes pratiques de cybersécurité</p>
                 </div>
 
-                <!-- Cisco -->
+                <!-- Pix -->
                 <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-center mb-4">
-                        <img src="https://www.netacad.com/sites/default/files/images/logo/cisco-logo.png" 
-                             alt="Cisco" class="w-16 h-16 object-contain mr-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pix_logo.svg/langfr-300px-Pix_logo.svg.png" 
+                             alt="Pix" class="w-16 h-16 object-contain mr-4">
                         <div>
-                            <h3 class="font-bold text-lg">CyberSecurity Essentials</h3>
-                            <p class="text-gray-600">Cisco</p>
+                            <h3 class="font-bold text-lg">Pix</h3>
+                            <p class="text-gray-600">Certification des compétences numériques</p>
                         </div>
                     </div>
-                    <p class="text-gray-600">Fondamentaux de la cybersécurité</p>
+                    <p class="text-gray-600">Fondamentaux de l'informatique</p>
+                    <a href="./fichiers/attestation-pix-20250306.pdf" target="_blank" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">
+                        Voir l' attestation
+                    </a>
                 </div>
 
                 <!-- Microsoft -->
