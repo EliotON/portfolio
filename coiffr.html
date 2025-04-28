@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coiff'R - Présentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4">
+            <a href="index.html" class="text-blue-600 font-bold text-xl">Retour au site</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16">
+        <h1 class="text-3xl font-bold text-center mb-8">Coiff'R</h1>
+        <section class="space-y-6">
+            <p class="text-gray-700 text-lg">
+                Coiff'R est une application interne conçue pour la gestion des rendez-vous dans un salon de coiffure. Elle permet aux employés de gérer efficacement les réservations, les clients et les horaires.
+            </p>
+            <h2 class="text-xl font-semibold">Technologies utilisées :</h2>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Next.js</li>
+                <li>Tailwind CSS</li>
+                <li>Shadcn</li>
+                <li>NextAuth.js</li>
+            </ul>
+            <h2 class="text-xl font-semibold">Fonctionnalités principales :</h2>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Gestion des rendez-vous</li>
+                <li>Suivi des clients</li>
+                <li>Interface utilisateur intuitive</li>
+            </ul>
+            <h2 class="text-xl font-semibold">Aperçu de l'interface :</h2>
+            <div class="relative w-full max-w-3xl mx-auto">
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <div class="relative">
+                        <img id="coiffr-slide" src="fichiers/coiffr/1.png" alt="Coiff'R Interface 1" class="w-full cursor-zoom-in" onclick="zoomImage(this)">
+                        <button id="prev-coiffr" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700">
+                            &#10094;
+                        </button>
+                        <button id="next-coiffr" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700">
+                            &#10095;
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Zoom Modal -->
+            <div id="zoom-modal-coiffr" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50">
+                <img id="zoomed-image-coiffr" class="max-w-full max-h-full">
+                <button onclick="closeZoom('zoom-modal-coiffr')" class="absolute top-4 right-4 text-white text-2xl">&times;</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Eliot KONDRYC. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        const coiffrImages = ["fichiers/coiffr/1.png", "fichiers/coiffr/2.png", "fichiers/coiffr/3.png", "fichiers/coiffr/4.png", "fichiers/coiffr/5.png"];
+        let coiffrIndex = 0;
+
+        document.getElementById("prev-coiffr").addEventListener("click", () => {
+            coiffrIndex = (coiffrIndex - 1 + coiffrImages.length) % coiffrImages.length;
+            document.getElementById("coiffr-slide").src = coiffrImages[coiffrIndex];
+        });
+
+        document.getElementById("next-coiffr").addEventListener("click", () => {
+            coiffrIndex = (coiffrIndex + 1) % coiffrImages.length;
+            document.getElementById("coiffr-slide").src = coiffrImages[coiffrIndex];
+        });
+
+        function zoomImage(img) {
+            const modal = document.getElementById("zoom-modal-coiffr");
+            const zoomedImage = document.getElementById("zoomed-image-coiffr");
+            zoomedImage.src = img.src;
+            modal.classList.remove("hidden");
+        }
+
+        function closeZoom(modalId) {
+            document.getElementById(modalId).classList.add("hidden");
+        }
+    </script>
+</body>
+</html>
